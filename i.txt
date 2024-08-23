@@ -1,0 +1,7 @@
+npm install eslint prettier eslint-config-prettier eslint-plugin-prettier --save-dev
+npm install tailwindcss
+npm install react-router-dom
+npm update @types/react-router-dom
+npm update react-router-dom
+npm install react-feather
+npm install react-dropzone
