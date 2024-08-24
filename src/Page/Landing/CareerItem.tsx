@@ -24,8 +24,7 @@ const CategoriesList = () => {
         {categories.map((category, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center p-4 hover:brightness-150"
-          >
+            className="flex flex-col items-center justify-center p-4 hover:brightness-150">
             <img
               src={category.icon}
               alt={category.name}
