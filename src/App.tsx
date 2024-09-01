@@ -7,7 +7,7 @@ import Blog from "./Page/Blog";
 import Profile from "./Page/Profile";
 import Lan from "./Page/Employer/Lan";
 import Info from "./Page/Employer/Info";
-import Job1 from "./Page/Employer/Job";
+// import Job1 from "./Page/Employer/Job";
 import PrivateRoute from "./Context/ProtectRoute";
 import AuthRoute from "./Context/AuthRoute";
 import { AuthProvider } from "./Context/AuthContext";
@@ -21,6 +21,7 @@ import LoginCompany from "./Page/Login/LoginCompany";
 import RegisterCompany from "./Page/Signup/RegisterCompany";
 import Job from "./Page/Job";
 import Company from "./Page/Company";
+import Info1 from "./Page/Employer/Job";
 
 const App: React.FC = () => {
   return (
@@ -71,7 +72,7 @@ const App: React.FC = () => {
 
           <Route
             path="/nhatuyendung/congviec"
-            element={<PrivateRoute element={<Info />} />}
+            element={<PrivateRoute element={<Info1 />} />}
           />
 
           <Route

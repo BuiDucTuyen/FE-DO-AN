@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import client from "../../config";
 import Footer from "../../Components/Footter";
 
-const Info = () => {
+const Info1 = () => {
   const navigate = useNavigate();
   const [street, setStreet] = useState("");
   const [district, setDistrict] = useState("");
@@ -94,13 +94,11 @@ const Info = () => {
           <div className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
             <form
               onSubmit={onRegisterCompany}
-              className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
-            >
+              className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="street"
-                >
+                  htmlFor="street">
                   Đường:
                 </label>
                 <input
@@ -114,8 +112,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="district"
-                >
+                  htmlFor="district">
                   Quận:
                 </label>
                 <input
@@ -129,8 +126,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="city"
-                >
+                  htmlFor="city">
                   Thành phố:
                 </label>
                 <input
@@ -144,8 +140,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="zipcode"
-                >
+                  htmlFor="zipcode">
                   Mã vùng:
                 </label>
                 <input
@@ -159,8 +154,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="major"
-                >
+                  htmlFor="major">
                   Ngành
                 </label>
                 <input
@@ -174,8 +168,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="name"
-                >
+                  htmlFor="name">
                   Tên công ty
                 </label>
                 <input
@@ -189,8 +182,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="minsalary"
-                >
+                  htmlFor="minsalary">
                   Lương:
                 </label>
                 <div className="flex gap-2">
@@ -216,8 +208,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="description"
-                >
+                  htmlFor="description">
                   Mô tả công việc:
                 </label>
                 <input
@@ -231,16 +222,14 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="level"
-                >
+                  htmlFor="level">
                   Cấp độ:
                 </label>
                 <select
                   id="level"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   value={level}
-                  onChange={(e) => setLevel(e.target.value)}
-                >
+                  onChange={(e) => setLevel(e.target.value)}>
                   <option value="">Chọn cấp độ</option>
                   <option value="IN">IN</option>
                   <option value="FR">FR</option>
@@ -255,8 +244,7 @@ const Info = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="expired_time"
-                >
+                  htmlFor="expired_time">
                   Thời gian hết hạn
                 </label>
                 <input type="date" onChange={handleChange} ref={dateInputRef} />
@@ -264,8 +252,7 @@ const Info = () => {
               <div className="flex items-center justify-center">
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="submit"
-                >
+                  type="submit">
                   Đăng ký
                 </button>
               </div>
@@ -278,4 +265,4 @@ const Info = () => {
   );
 };
 
-export default Info;
+export default Info1;
