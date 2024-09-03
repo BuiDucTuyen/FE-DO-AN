@@ -60,7 +60,7 @@ const Job: React.FC = () => {
         </div>
         {!visible ? (
           <div className="text-2xl font-bold mb-2">
-            Bạn phải đăng nhập trước!
+            Bạn phải nhập thông tin cá nhân !
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">

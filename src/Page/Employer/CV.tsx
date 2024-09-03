@@ -73,14 +73,17 @@ const CV: React.FC = () => {
         <h1 className="text-4xl font-bold mb-12 text-center text-gray-800">
           Danh sách công việc
         </h1>
-        {listJob.map((job) => (
-          <div
-            key={job.id}
-            className="mb-20 border-t-4 border-gray-300 rounded-xl shadow-lg p-8 bg-white"
-          >
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 py-10">
-              <div className="flex flex-col gap-5 w-full md:w-1/2">
-                <p className="text-3xl md:text-4xl uppercase font-bold mb-5 text-center md:text-left text-blue-600">
+        <h1 className="text-2xl font-bold mb-5 text-gray-800">
+          Đã có {listJob.length} công việc được tạo
+        </h1>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {listJob.map((job) => (
+            <div
+              key={job.id}
+              className="border-t-4 border-gray-300 rounded-xl shadow-lg p-8 bg-white">
+              <div className="flex flex-col items-start justify-between gap-6">
+                <p className="text-3xl uppercase font-bold mb-5 text-center md:text-left text-blue-600">
                   {job.name}
                 </p>
                 <div className="flex flex-wrap md:text-xl text-lg justify-between text-gray-700">
@@ -99,7 +102,9 @@ const CV: React.FC = () => {
                     <MdWork size={24} className="text-gray-600" />
                     <p className="ml-3">
                       {job.major.map((major) => (
-                        <span className="block">{major.name}</span>
+                        <span key={major.name} className="block">
+                          {major.name}
+                        </span>
                       ))}
                     </p>
                   </div>
@@ -113,7 +118,6 @@ const CV: React.FC = () => {
                       className="text-gray-600"
                     />
                     <p className="ml-3">
-                      {" "}
                       {job.min_salary} $ - {job.max_salary} $
                     </p>
                   </div>
@@ -125,26 +129,19 @@ const CV: React.FC = () => {
                     <p className="ml-3">{job.description}</p>
                   </div>
                 </div>
+                <Link to={`/chitietcv/${job.id}`}>
+                  <Button
+                    className="px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-bold focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+                    type="primary">
+                    Chi Tiết
+                  </Button>
+                </Link>
               </div>
-
-              <Link to={`/chitietcv/${job.id}`}>
-                <Button
-                  className="px-4  bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
-                  type="primary"
-                >
-                  Chi tiết
-                </Button>
-              </Link>
-              {/* <Link
-                to={`/chitietcv/${job.id}`}
-                className="text-blue-600 hover:underline"
-              >
-                Chi Tiết
-              </Link> */}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
       <Footer />
     </section>
   );

@@ -47,20 +47,18 @@ const Company: React.FC = () => {
         </div> */}
         {!visible ? (
           <div className="text-2xl font-bold mb-2">
-            Bạn phải đăng nhập trước!
+            Bạn phải nhập thông tin cá nhân !
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCompanies.map((company) => (
               <div
                 key={company.id}
-                className="border border-gray-300 rounded-lg shadow-lg p-6 bg-white"
-              >
+                className="border border-gray-300 rounded-lg shadow-lg p-6 bg-white">
                 <h2 className="text-2xl font-bold mb-4">
                   <Link
                     to={`/chitietcongty/${company.id}`}
-                    className="text-blue-600 hover:underline"
-                  >
+                    className="text-blue-600 hover:underline">
                     {company.name}
                   </Link>
                 </h2>
@@ -80,8 +78,7 @@ const Company: React.FC = () => {
                 </p>
                 <Link
                   to={`/chitietcongty/${company.id}`}
-                  className="text-blue-600 hover:underline"
-                >
+                  className="text-blue-600 hover:underline">
                   Chi Tiết
                 </Link>
               </div>

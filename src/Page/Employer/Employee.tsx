@@ -77,13 +77,11 @@ const Employee = () => {
           <div className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
             <form
               onSubmit={onRegisterCompany}
-              className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
-            >
+              className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="street"
-                >
+                  htmlFor="street">
                   Đường:
                 </label>
                 <input
@@ -97,8 +95,7 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="district"
-                >
+                  htmlFor="district">
                   Quận:
                 </label>
                 <input
@@ -112,8 +109,7 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="city"
-                >
+                  htmlFor="city">
                   Thành phố:
                 </label>
                 <input
@@ -127,8 +123,7 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="zipcode"
-                >
+                  htmlFor="zipcode">
                   Mã vùng:
                 </label>
                 <input
@@ -142,8 +137,7 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="major"
-                >
+                  htmlFor="major">
                   Ngành
                 </label>
                 <input
@@ -157,8 +151,7 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="name"
-                >
+                  htmlFor="name">
                   Họ và tên
                 </label>
                 <input
@@ -197,8 +190,7 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="number"
-                >
+                  htmlFor="number">
                   Số điện thoại:
                 </label>
                 <input
@@ -213,16 +205,14 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="gender"
-                >
+                  htmlFor="gender">
                   Giới tính:
                 </label>
                 <select
                   id="gender"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   value={gender}
-                  onChange={(e) => setGender(e.target.value)}
-                >
+                  onChange={(e) => setGender(e.target.value)}>
                   <option value="">Chọn giới tính</option>
                   <option value="F">Nữ</option>
                   <option value="M">Nam</option>
@@ -231,8 +221,7 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="age"
-                >
+                  htmlFor="age">
                   Tuổi
                 </label>
                 <input
@@ -246,9 +235,8 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="intro"
-                >
-                  Mô tả bản thân:
+                  htmlFor="intro">
+                  Giới thiệu bản thân:
                 </label>
                 <input
                   id="intro"
@@ -261,16 +249,14 @@ const Employee = () => {
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="level"
-                >
+                  htmlFor="level">
                   Cấp độ:
                 </label>
                 <select
                   id="level"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   value={level}
-                  onChange={(e) => setLevel(e.target.value)}
-                >
+                  onChange={(e) => setLevel(e.target.value)}>
                   <option value="">Chọn cấp độ</option>
                   <option value="IN">INTERN</option>
                   <option value="FR">FRESHER</option>
@@ -285,8 +271,7 @@ const Employee = () => {
               <div className="flex items-center justify-center">
                 <button
                   className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                  type="submit"
-                >
+                  type="submit">
                   Tạo thông tin
                 </button>
               </div>

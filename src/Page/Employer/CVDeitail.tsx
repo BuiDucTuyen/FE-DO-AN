@@ -35,70 +35,74 @@ const CvDetail: React.FC = () => {
         <h1 className="text-4xl font-bold mb-12 text-center text-gray-800">
           Danh sách CV
         </h1>
-        {listFiles.map((file, index) => (
-          <div
-            key={index}
-            className="mb-20 border-t-4 border-gray-300 rounded-xl shadow-lg p-8 bg-white"
-          >
-            <div className="flex flex-col gap-5 w-full md:w-1/2">
-              <p className="text-3xl md:text-4xl uppercase font-bold mb-5 text-center md:text-left text-blue-600">
-                {file.employee.name}
-              </p>
-              <div className="flex flex-wrap md:text-xl text-lg justify-between text-gray-700">
-                <div className="flex items-center font-medium mb-5 w-full">
-                  <FaLocationDot size={24} className="text-gray-600" />
-                  <p className="ml-3">
-                    {file.employee.employee_address.street} -{" "}
-                    {file.employee.employee_address.district} -{" "}
-                    {file.employee.employee_address.city}
+        <h1 className="text-2xl font-semibold mb-6  text-gray-600">
+          Có {listFiles.length} CV ứng tuyển
+        </h1>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {listFiles.map((file, index) => (
+              <div
+                key={index}
+                className="border-t-4 border-gray-300 rounded-xl shadow-lg p-8 bg-white">
+                <div className="flex flex-col gap-5">
+                  <p className="text-3xl md:text-4xl uppercase font-bold mb-5 text-center md:text-left text-blue-600">
+                    {file.employee.name}
                   </p>
-                </div>
-                <div className="flex items-center font-medium mb-5 w-full">
-                  <MdWork size={24} className="text-gray-600" />
-                  <p className="ml-3">
-                    {file.employee.major.map((major, idx) => (
-                      <span key={idx} className="block">
-                        {major.name}
-                      </span>
-                    ))}
-                  </p>
-                </div>
-                <div className="flex items-center font-medium mb-5 w-full">
-                  <MdContactPhone size={24} className="text-gray-600" />
-                  <p className="ml-3">{file.employee.number}</p>
-                </div>
-                {/* <div className="flex items-center font-medium mb-5 w-full">
-                  <RiGroupFill size={24} className="text-gray-600" />
-                  <p className="ml-3">{file.employee.gender}</p>
-                </div> */}
-                <div className="flex items-center font-medium mb-5 w-full">
-                  <RiGroupFill size={24} className="text-gray-600" />
-                  <p className="ml-3">{file.employee.age}</p>
-                </div>
-                <div className="flex items-center font-medium mb-5 w-full">
-                  <IoLogoBuffer size={24} className="text-gray-600" />
-                  <p className="ml-3">{file.employee.level}</p>
-                </div>
-                <div className="flex items-center font-medium mb-5 w-full">
-                  <BiSolidMessageAltDetail
-                    size={24}
-                    className="text-gray-600"
-                  />
-                  <p className="ml-3">{file.employee.personal_introduction}</p>
-                </div>
-                <div className="flex items-center font-medium mb-5 w-full">
-                  <button
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-                    onClick={() => window.open(`${file.cv_url}`, "_blank")}
-                  >
-                    Xem CV
-                  </button>
+                  <div className="flex flex-wrap md:text-xl text-lg justify-between text-gray-700">
+                    <div className="flex items-center font-medium mb-5 w-full">
+                      <FaLocationDot size={24} className="text-gray-600" />
+                      <p className="ml-3">
+                        {file.employee.employee_address.street} -{" "}
+                        {file.employee.employee_address.district} -{" "}
+                        {file.employee.employee_address.city}
+                      </p>
+                    </div>
+                    <div className="flex items-center font-medium mb-5 w-full">
+                      <MdWork size={24} className="text-gray-600" />
+                      <p className="ml-3">
+                        {file.employee.major.map((major, idx) => (
+                          <span key={idx} className="block">
+                            {major.name}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                    <div className="flex items-center font-medium mb-5 w-full">
+                      <MdContactPhone size={24} className="text-gray-600" />
+                      <p className="ml-3">{file.employee.number}</p>
+                    </div>
+                    <div className="flex items-center font-medium mb-5 w-full">
+                      <RiGroupFill size={24} className="text-gray-600" />
+                      <p className="ml-3">{file.employee.age}</p>
+                    </div>
+                    <div className="flex items-center font-medium mb-5 w-full">
+                      <IoLogoBuffer size={24} className="text-gray-600" />
+                      <p className="ml-3">{file.employee.level}</p>
+                    </div>
+                    <div className="flex items-center font-medium mb-5 w-full">
+                      <BiSolidMessageAltDetail
+                        size={24}
+                        className="text-gray-600"
+                      />
+                      <p className="ml-3">
+                        {file.employee.personal_introduction}
+                      </p>
+                    </div>
+                    <div className="flex items-center font-medium mb-5 w-full">
+                      <button
+                        className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                        onClick={() => window.open(`${file.cv_url}`, "_blank")}>
+                        Xem CV
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
+
       <Footer />
     </section>
   );
